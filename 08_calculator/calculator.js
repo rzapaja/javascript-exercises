@@ -1,3 +1,5 @@
+//I LITERALLYT GIVE UP
+
 const add = function(num1,...nums) {
 	
   let sum = num1;
@@ -21,35 +23,37 @@ const subtract = function(num1,...nums) {
 
 };
 
-const sum = function(...nums) {
+const sum = function(array) {
   
-  let sum = 0;
-  console.log(nums);
-
-    for (i of nums){
-      sum += Number(i);
-      console.log(sum);
-    };
-
-  return sum;
+return array.reduce((total, current) => total + current, 0);
 
 };
 
-const multiply = function(num1,...nums) {
+const multiply = function(array) {
 
-  let product = num1;
-  for (i of nums){
-    product *= i;
+  return array.reduce((total, current) => total * current);
+
+};
+
+const power = function (a, b) {
+  return Math.pow(a, b);
+};
+
+
+const factorial = function(number) {
+	
+  let product = 0;
+
+  if (number === 0 || number === 1){
+    return 1;
+  } else{
+      while (number >= 1){
+        number = number * (number-1);
+      }
   }
 
-};
+  return product;
 
-const power = function() {
-	
-};
-
-const factorial = function() {
-	
 };
 
 // Do not edit below this line
